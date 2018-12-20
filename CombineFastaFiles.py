@@ -6,11 +6,11 @@ Created on Wed Dec 19 21:21:14 2018
 @author: Han
 """
 
-# This script can combine multiple fasta files into one fasta file and use a row
-# of "-" separate each file
+# This script can combine multiple fasta files into one fasta file and use a 
+# couple blank rows to separate each file's content
 
 # Instruction: 
-# replace inputDir with the directory of the folder
+# replace inputDir with the directory of the folder and then run the file
 
 
 
