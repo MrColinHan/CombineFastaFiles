@@ -16,7 +16,8 @@ Created on Wed Dec 19 21:21:14 2018
 
 import os
 
-inputDir = "/Users/Han/Documents/Haim Lab(2018 summer)/12.18/16-17 USA/GroupedOutput/"
+inputDir = r"/Users/Han/Documents/Haim Lab(2018 summer)/12.18/16-17 USA/GroupedOutput/"
+separatorDir = r"/Users/Han/Documents/Haim Lab(2018 summer)/CombineFiles/separator.fas"
 
 ############################################################
 
@@ -40,11 +41,17 @@ def listFiles():
     print ("Files: "+str(allFiles))
     print ("\r\n")
         
+def separator():
+    file = open(separatorDir,"r")
+    contents = file.read()
+    return (contents)
 
+separ = separator()
+    
 
 def createOutput():
     count = 0
-    output= open(inputDir+"Output.fas","w+")
+    output= open(inputDir+"Output.fas","w+") 
     print("Output.fas is created")
     for filename in allFiles:
         file = open(inputDir+filename,"r")
@@ -52,7 +59,8 @@ def createOutput():
             contents = file.read()
             #for i in contents:
             output.write(contents)
-            output.write("\r\n"+"\r\n"+"\r\n"+"\r\n")
+            #output.write("\r\n"+"\r\n"+"\r\n"+"\r\n")
+            output.write("\r\n"+ separ + "\r\n" + separ +"\r\n")
             count = count + 1
             #print(contents)
             #print("\r\n")
